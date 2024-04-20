@@ -1,0 +1,23 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Use Angular *ngFor directive to loop through students -->
+      <tr *ngFor="let student of students">
+        <td>{{ student.id }}</td>
+        <td>{{ student.name }}</td>
+        <td>{{ student.age }}</td>
+        <td>
+          <button class="btn btn-primary" (click)="editStudent(student)">Edit</button>
+          <button class="btn btn-danger" (click)="deleteStudent(student)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
